@@ -1,8 +1,5 @@
 import { component$ } from "@builder.io/qwik";
 import {
-  type DocumentHead,
-  type DocumentHeadProps,
-  type DocumentHeadValue,
   Form,
   routeAction$,
   routeLoader$,

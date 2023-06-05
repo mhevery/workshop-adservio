@@ -2,15 +2,12 @@ import { component$, Slot, useStylesScoped$ } from "@builder.io/qwik";
 import { Form, type RequestHandler, routeLoader$ } from "@builder.io/qwik-city";
 import { useAuthSession, useAuthSignin, useAuthSignout } from "./plugin@auth";
 import CSS from "./layout.css?inline";
-import { type Session } from "@auth/core/types";
 
 export const onRequest: RequestHandler = async ({ url }) => {
   console.log("GUARD", url.toString());
 };
 
-export const useUser = routeLoader$(async ({ sharedMap }) => {
-  const session = sharedMap.get("session") as Session;
-  // console.log("session", session);
+export const useUser = routeLoader$(async () => {
   return "mhevery";
 });
 

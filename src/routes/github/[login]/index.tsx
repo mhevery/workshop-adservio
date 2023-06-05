@@ -33,12 +33,7 @@ export const useRepositories = routeLoader$(async ({ env, params }) => {
   return (await response.json()) as OrgReposResponse;
 });
 
-export const onGet: RequestHandler = async ({
-  request,
-  json,
-  exit,
-  redirect,
-}) => {
+export const onGet: RequestHandler = async ({ request, exit, redirect }) => {
   const obj: Record<string, string> = {};
   request.headers.forEach((value, key) => (obj[key] = value));
   // console.log("GET", obj);
